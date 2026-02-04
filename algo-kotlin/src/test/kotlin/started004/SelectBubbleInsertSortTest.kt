@@ -1,6 +1,6 @@
-package section004sort
+package started004
 
-import com.time1043.section004sort.SelectBubbleInsertSort
+import com.time1043.started004.SelectBubbleInsertSort
 import org.junit.jupiter.api.Test
 import kotlin.random.Random
 import kotlin.test.assertContentEquals
@@ -29,9 +29,9 @@ class SelectBubbleInsertSortTest {
             val expected = input.copyOf().also { violenceSolution(it) }
             val actual = input.copyOf().also { solution(it) }
 
-            println("Input   : ${input.contentToString()}")
-            println("Expected: ${expected.contentToString()}")
-            println("Actual  : ${actual.contentToString()}")
+            // println("Input   : ${input.contentToString()}")
+            // println("Expected: ${expected.contentToString()}")
+            // println("Actual  : ${actual.contentToString()}")
             assertContentEquals(expected, actual)
         }
     }
