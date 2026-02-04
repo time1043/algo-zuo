@@ -1,0 +1,4 @@
+
+![[calculate-gini|500]]
+
+ 
