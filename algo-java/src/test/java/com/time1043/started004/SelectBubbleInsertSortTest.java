@@ -20,7 +20,6 @@ class SelectBubbleInsertSortTest {
         int[] nums = new int[size];
 
         // Math.random(): [0,1)
-        // // Math.random() * (6+1): [0, 7) = 0~6
         // Math.random() * (6*2+1) - 6: [-6, 7) = -6~6
         for (int i = 0; i < nums.length; i++)
             nums[i] = (int) (Math.random() * (maxValue * 2 + 1)) - maxValue;
@@ -56,6 +55,11 @@ class SelectBubbleInsertSortTest {
     @Test
     void bubbleSort() {
         check(SelectBubbleInsertSort::bubbleSort);
+    }
+
+    @Test
+    void bubbleSort2() {
+        check(SelectBubbleInsertSort::bubbleSort2);
     }
 
     @Test

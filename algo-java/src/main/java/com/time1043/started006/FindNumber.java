@@ -8,8 +8,8 @@ public class FindNumber {
 
         int left = 0, right = nums.length - 1, middle;
         while (left <= right) {
-            // middle = (left + right) / 2;
-            middle = left + ((right - left) >> 1);
+            // middle = (left + right) / 2;  // Possible data overflow
+            middle = left + ((right - left) >> 1);  // Bit operations are more efficient
             if (nums[middle] > target) right = middle - 1;
             if (nums[middle] < target) left = middle + 1;
             if (nums[middle] == target) return middle;

@@ -36,6 +36,23 @@ public class SelectBubbleInsertSort {
         }
     }
 
+    public static void bubbleSort2(int[] nums) {
+        // Consider the boundary
+        if (nums == null || nums.length < 2) return;
+
+        // By comparing neighboring positions, the larger one bubbles backward
+        // Only 1 while loop, but complexity is O(n^2)
+        int end = nums.length - 1, i = 0;
+        while (end > 0) {
+            if (nums[i] > nums[i + 1]) swap(nums, i, i + 1);
+            if (i < end - 1) i++;  // loop
+            else {
+                end--;  // loop
+                i = 0;
+            }
+        }
+    }
+
     public static void insertSort(int[] nums) {
         // Consider the boundary
         if (nums == null || nums.length < 2) return;
